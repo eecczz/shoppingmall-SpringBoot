@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: payment
+  # Database 설정
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  # JPA 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: none        # DB 초기화 전략 (none, create, create-drop, update, validate)
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        format_sql: true      # 쿼리 로그 포맷 (정렬)
+        show_sql: true        # 쿼리 로그 출력
+    mvc:
+      view:
+        prefix: "/WEB-INF/views"
+  imp:
+    code: ${IMP_CODE}
+    api:
+      key: ${IMP_API_KEY}
+      secretkey: ${IMP_API_SECRET}
+  server:
+    servlet:
+      session:
+        tracking-modes: cookie
