@@ -3,6 +3,8 @@
 Spring Boot + MariaDB 기반 쇼핑몰 데모 프로젝트입니다.  
 상품 조회 → 상세 보기 → 장바구니 → 결제(PortOne 테스트) 흐름을 **Thymeleaf** 화면으로 제공합니다.
 
+> 보안: 실제 API 키, 비밀번호, AWS 자격증명은 저장소에 넣지 않습니다. 로컬 값은 추적되지 않는 `.env` 또는 운영체제 환경 변수로 제공하며, 모든 push와 pull request에서 Gitleaks 검사를 실행합니다.
+
 ---
 
 ## 🌐 배포 주소 (jcloud)
